@@ -1,0 +1,80 @@
+//import 'dart:io';
+
+void main() {
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+  // One line solution
+  print([for (var i in a) if (i < 5) i]);
+
+  
+  /* Question 2 is Take two lists, for example: 
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] &  
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] */
+  
+  //List<int> a = [1, 1, 2, 3, 5, 6, 13, 21, 34, 55, 89]; already defined in Qn1
+  List<int> b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  
+  // return a list that contains common elements in a and b. That list is c 
+  List<int> c = [];
+  
+  for(var i in a) {
+    for(var j in b) {
+      if(i == j) {
+        c.add(i);
+      }
+    }
+  }
+  print(c);
+  
+}
+
+/* 3. Write a program to check if a string is a palindrome or not.
+    A palindrome is a string that reads the same forwards and backwards. Eg mum 
+  
+      print("Please type your word here: ");
+      String? userInput = stdin.readLineSync();
+      String? revInput =  userInput.split('').reversed.join('');
+  
+    // Checking the condition
+      if(userInput == revInput) {
+        print('The word is a palindrome');
+      } else{
+        print('The word is not a palindrome');
+      } 
+      I realize that using the dartpad we cannot import dart:io to allow user inputs 
+      and reading them from the screen. That code block is okay in any other editor
+      */
+ // ===============================================================================
+    // I need to learn the concept and logic for the below questions
+ // ===============================================================================
+
+/* 4. Write a program that takes a list of numbers for example
+a = [5, 10, 15, 20, 25]
+and makes a new list of only the first and last elements of the given list.
+For practice, write this code inside a function.*/
+
+/* 5. Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order.
+For example, say I type the string:
+ My name is Michele
+
+
+Then I would see the string:
+ Michele is name My
+
+
+6. Write a program (function) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.
+
+
+7. In this exercise, load that JSON file below, 
+a, Extract the months of all the birthdays.
+B, count how many birthdays in each month.
+C, write a program to show the month with the heights and lowest birthday.
+{
+    "May": 3,
+    "May": 5,
+    "November": 2,
+    "December": 1,
+    "December": 4,
+    "December": 2,
+}
+*/
